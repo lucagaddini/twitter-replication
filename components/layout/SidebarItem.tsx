@@ -7,7 +7,7 @@ interface SidebarItemProps{
   onClick?: () => void;
 }
 
-const SiderbarItem: React.FC<SidebarItemProps> = ({
+const SidebarItem: React.FC<SidebarItemProps> = ({
   label: Label,
   href,
   icon: Icon,
@@ -36,4 +36,4 @@ const SiderbarItem: React.FC<SidebarItemProps> = ({
   );
 }
 
-export default SiderbarItem;
+export default SidebarItem;
