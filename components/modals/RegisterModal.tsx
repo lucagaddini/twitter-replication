@@ -5,7 +5,7 @@ import useRegisterModal from "@/hooks/useRegisterModal";
 import Input from "../Input";
 import Modal from "../Modal";
 
-const registerModal = () => {
+const RegisterModal = () => {
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
 
@@ -103,4 +103,4 @@ const registerModal = () => {
   );
 }
 
-export default registerModal;
+export default RegisterModal;
