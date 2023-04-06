@@ -4,7 +4,6 @@ import CredentialProvider from 'next-auth/providers/credentials'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 
 import prisma from '@/libs/prismadb'
-import { error } from 'console'
 
 export default NextAuth ({
   adapter: PrismaAdapter(prisma),
