@@ -1,11 +1,11 @@
-import { BsHouseFill, BsBellFill } from "react-icons/bs";
-import { FaUser } from "react-icons/fa";
-import { BiLogOut } from "react-icons/bi";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import { signOut } from "next-auth/react";
+import { BiLogOut } from "react-icons/bi";
+import { BsBellFill, BsHouseFill } from "react-icons/bs";
+import { FaUser } from "react-icons/fa";
 
-import SidebarLogo from "./SidebarLogo";
 import SidebarItem from "./SidebarItem";
+import SidebarLogo from "./SidebarLogo";
 import SidebarTweetButton from "./SidebarTweetButton";
 
 const Sidebar = () => {
