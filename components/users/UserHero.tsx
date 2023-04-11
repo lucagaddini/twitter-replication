@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import useUser from "@/hooks/useUsers";
+import useUser from "@/hooks/useUser";
 
 import Avatar from "../Avatar";
 
@@ -17,6 +17,9 @@ const UserHero: React.FC<UserHeroProps> = ({ userId }) => {
         <Image
           src={fetchedUser.coverImage}
           fill
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           alt="Cover Image"
           style={{ objectFit: "cover" }}
         />
