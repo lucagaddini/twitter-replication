@@ -7,6 +7,7 @@ https://twitter.lucagaddini.com
 ## Languages | Framework
 - Next.js
 - TypeScript
+- Tailwind CSS
 - MongoDB
 
 ## Screenshots
