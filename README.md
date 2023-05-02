@@ -1,8 +1,13 @@
-# twitter-replication
+# Twitter Replication (Project Under Development)
 
 ## Demo
 
 https://twitter.lucagaddini.com
+
+## Languages | Framework
+- Next.js
+- TypeScript
+- MongoDB
 
 ## Screenshots
 
