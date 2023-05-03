@@ -4,6 +4,7 @@ import useUser from "@/hooks/useUser";
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import ImageUpload from "../ImageUpload";
 import Input from "../Input";
 import Modal from "../Modal";
 
@@ -61,18 +62,35 @@ const EditModal = () => {
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
+      <p className="font-semibold text-white">Profile Image</p>
+      <ImageUpload
+        value={profileImage}
+        disabled={isLoading}
+        onChange={(image) => setProfileImage}
+        label="Upload profile image"
+      />
+      <p className="font-semibold text-white">Cover Image</p>
+      <ImageUpload
+        value={coverImage}
+        disabled={isLoading}
+        onChange={(image) => setCoverImage}
+        label="Upload cover image"
+      />
+      <p className="font-semibold text-white">Name</p>
       <Input
         placeholder="Name"
         onChange={(e) => setName(e.target.value)}
         value={name}
         disabled={isLoading}
       />
+      <p className="font-semibold text-white">Username</p>
       <Input
         placeholder="Username"
         onChange={(e) => setUsername(e.target.value)}
         value={username}
         disabled={isLoading}
       />
+      <p className="font-semibold text-white">Bio</p>
       <Input
         placeholder="Bio"
         onChange={(e) => setBio(e.target.value)}
