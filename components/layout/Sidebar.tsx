@@ -13,45 +13,53 @@ const Sidebar = () => {
 
   const items = [
     {
-    label: "Home",
-    href: "/",
-    icon: BsHouseFill,
+      label: "Home",
+      href: "/",
+      icon: BsHouseFill,
     },
     {
       label: "Notifications",
       href: "/notifications",
       icon: BsBellFill,
-      auth: true
+      auth: true,
     },
-    {
-      label: "Profile",
-      href: "/users/123",
-      icon: FaUser,
-      auth: true
-    },
-  ]
+  ];
 
-  return ( 
+  return (
     <div className="col-span-1 h-full p-4 md:pr-6">
       <div className="flex flex-col items-center">
         <div className="space-y-2 lg:w-[230px]">
           <SidebarLogo />
           {items.map((item) => (
-            <SidebarItem 
+            <SidebarItem
               key={item.href}
               href={item.href}
               label={item.label}
               icon={item.icon}
               auth={item.auth}
             />
-          ))}{ currentUser && (
-            <SidebarItem onClick={() => signOut()} icon={BiLogOut} label="Logout"/>
+          ))}
+          {currentUser && (
+            <>
+              <SidebarItem
+                key={`/users/${currentUser?.id}`}
+                href={`/users/${currentUser?.id}`}
+                label="Profile"
+                icon={FaUser}
+                auth={true}
+              />
+              <SidebarItem
+                onClick={() => signOut()}
+                icon={BiLogOut}
+                label="Logout"
+              />
+            </>
           )}
           <SidebarTweetButton />
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Sidebar ;
+export default Sidebar;
