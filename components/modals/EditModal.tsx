@@ -66,9 +66,10 @@ const EditModal = () => {
       <ImageUpload
         value={profileImage}
         disabled={isLoading}
-        onChange={(image) => setProfileImage}
+        onChange={(image) => setProfileImage(image)}
         label="Upload profile image"
       />
+
       <p className="font-semibold text-white">Cover Image</p>
       <ImageUpload
         value={coverImage}
